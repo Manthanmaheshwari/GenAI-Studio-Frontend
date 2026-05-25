@@ -1,0 +1,117 @@
+<div class="container mx-auto px-4 py-12">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold mb-4">
+          Transform Unstructured Data with <span class="text-blue-500">AI</span>
+        </h1>
+        <p class="text-gray-600 mb-8 text-lg">
+          Upload text, audio, or video files and generate structured content like user
+          stories or test cases using advanced AI models.
+        </p>
+        <button 
+          (click)="navigateToUpload()" 
+          class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md transition-colors"
+        >
+          Start Converting
+        </button>
+      </div>
+
+      <div class="mt-20">
+        <h2 class="text-2xl font-bold text-center mb-12">Input Capabilities</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Text-to-Structure -->
+          <div class="border rounded-lg p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Text-to-Structure</h3>
+            <p class="text-gray-600">
+              Convert unstructured text into structured formats like JSON, tables, or lists.
+            </p>
+          </div>
+
+          <!-- Audio Processing -->
+          <div class="border rounded-lg p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" x2="12" y1="19" y2="22"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Audio Processing</h3>
+            <p class="text-gray-600">
+              Transform audio recordings into transcripts and structured data.
+            </p>
+          </div>
+
+          <!-- Video Analysis -->
+          <div class="border rounded-lg p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <path d="m10 13 5 3-5 3v-6Z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Video Analysis</h3>
+            <p class="text-gray-600">
+              Extract key information from video content for structured output.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20">
+        <h2 class="text-2xl font-bold text-center mb-12">Output Types</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- User Stories -->
+          <div class="border rounded-lg p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">User Stories</h3>
+            <p class="text-gray-600">
+              Generate detailed user stories from requirements.
+            </p>
+          </div>
+
+          <!-- Test Cases -->
+          <div class="border rounded-lg p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <path d="m9 15 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Test Cases</h3>
+            <p class="text-gray-600">
+              Create comprehensive test cases from specifications.
+            </p>
+          </div>
+
+          <!-- Custom Format -->
+          <div class="border rounded-lg p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <path d="M12 18v-6"></path>
+                <path d="M8 18v-1"></path>
+                <path d="M16 18v-3"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Custom Format</h3>
+            <p class="text-gray-600">
+              Define your own structured output format.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>

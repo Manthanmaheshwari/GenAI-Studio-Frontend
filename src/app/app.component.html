@@ -1,0 +1,23 @@
+<header class="border-b border-gray-100">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a routerLink="/" class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            <path d="M12 3a6 6 0 0 1-9 9 9 0 0 0 9-9Z"></path>
+          </svg>
+          <span class="text-xl font-bold">GenAI Studio</span>
+         
+        </a>
+        <nav>
+          <ul class="flex gap-8">
+            <li><a routerLink="/" routerLinkActive="font-medium" [routerLinkActiveOptions]="{exact: true}" class="hover:text-blue-500">Home</a></li>
+            <li><a routerLink="/upload" routerLinkActive="font-medium" class="hover:text-blue-500">Upload</a></li>
+            <li><a routerLink="/history" routerLinkActive="font-medium" class="hover:text-blue-500">History</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+<router-outlet />
