@@ -18,7 +18,7 @@ export class UploadComponent {
   generatedContent = "";
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
-    // 1. Yahan additionalInstructions add kiya hai terminal error fix karne ke liye
+    // Initialize additionalInstructions in the form group to prevent validation or model binding issues
     this.form = this.fb.group({
       file: [null],
       outputType: ['userStories'], 
@@ -43,8 +43,8 @@ export class UploadComponent {
 
     if (event.dataTransfer?.files.length) {
       const file = event.dataTransfer.files[0];
-      this.selectedFile = file; // UI mein file name dikhane ke liye
-      this.form.patchValue({ file: file }); // Form control update karne ke liye
+      this.selectedFile = file; // Set reference to display selected filename in template
+      this.form.patchValue({ file: file }); // Update form control value
     }
   }
 
@@ -52,8 +52,8 @@ export class UploadComponent {
     const fileInput = event.target as HTMLInputElement;
     if (fileInput.files && fileInput.files.length > 0) {
       const file = fileInput.files[0];
-      this.selectedFile = file; // UI update
-      this.form.patchValue({ file: file }); // Form update
+      this.selectedFile = file; // Update selected file reference for UI
+      this.form.patchValue({ file: file }); // Update form control value
     }
   }
 
@@ -76,10 +76,10 @@ export class UploadComponent {
 
     this.generatedContent = "Processing your file, please wait...";
 
-    // API Call
+    // Perform POST request to upload endpoint
     this.http.post<any>('https://localhost:7234/Upload', formData).subscribe({
       next: (res) => {
-        // Backend se jo response property aa rahi hai use check karein (content ya result)
+        // Check for content/result property returned from backend API
         this.generatedContent = res.content || res.result || "Content generated successfully!";
       },
       error: (err) => {
